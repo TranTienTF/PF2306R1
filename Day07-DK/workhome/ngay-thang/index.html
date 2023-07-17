@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>so ngay trong thang</title>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h3>Tính số ngày trong 1 tháng</h3>
+			<input type="number" name="tháng" id="month" onchange="getMonth(this)">
+			<input type="button" value="Tính số ngày" onclick="countDate()">
+			<p id="day-of-month"></p>
+			<script>
+				let month;
+				let dayOfMonth = document.getElementById("day-of-month");
+				function getMonth(obj) {
+					console.log(obj.value);
+					month = obj.value;
+				}
+				function countDate() {
+					if (month > 0 && month <=12) {
+						switch (month) {
+							case "1":
+							case "3":
+							case "5":
+							case "7":
+							case "8":
+							case "10":
+							case "12":
+								dayOfMonth.innerText = `Tháng ${month} có 31 ngày`;
+								break;
+							case "4":
+							case "6":
+							case "9":
+							case "11":
+								dayOfMonth.innerText = `Tháng ${month} có 30 ngày`;
+								break;
+							default:
+								dayOfMonth.innerText = 'Tháng 2 có 28 hoặc 29 ngày';
+								break;
+						}
+					} else {
+						alert("Please enter a valid month number");
+					}
+				}
+			</script>
+        </div>
+    </main>
+</body>
+</html>

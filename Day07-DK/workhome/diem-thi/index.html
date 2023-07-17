@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/Bootstrap/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+		<div class="container">
+			<h3>Tính điểm ĐH khối D</h3>
+			<form action="">
+				<div class="mb-3">
+					<label for="score-math">Môn Toán</label>
+					<input type="text" name="Điểm Toán" id="score-math"
+						onchange="getScoreMath(this)" title="Nhập bằng chữ số">
+				</div>
+				<div class="mb-3">
+					<label for="score-verse">Môn Văn</label>
+					<input type="text" name="Điểm Toán" id="score-verse" onchange="getScoreVerse(this)">
+				</div>
+				<div class="mb-3">
+					<label for="score-eng">Môn Anh</label>
+					<input type="text" name="Điểm Toán" id="score-eng" onchange="getScoreEng(this)">
+				</div>
+				<div class="mb-3">
+					<span>Khu vực</span>
+					<select name="điểm cộng" id="score-add">
+						<option value="KV1">KV1</option>
+						<option value="KV2">KV2</option>
+						<option value="KV2-NT">KV2-NT</option>
+						<option value="KV3">KV3</option>
+					</select>
+				</div>
+				<div class="mb-3">
+					<input type="button" onclick="btnScore()" value="Tính điểm">
+				</div>
+				<p class="text-danger">
+					Tổng điểm ĐH khối D của bạn là: <span id="result"></span>
+				</p>
+			</form>
+			
+			<script>
+				// khai báo var
+				let math, verse, english;
+				// check input
+				function getScoreMath(obj) {
+					console.log ("Toán: " + obj.value);
+					math = obj.value;
+				}
+				function getScoreVerse(obj) {
+					console.log ("Văn: " + obj.value);
+					verse = obj.value;
+				}
+				function getScoreEng(obj) {
+					console.log ("Anh: " + obj.value);
+					english = obj.value;
+				}
+				function btnScore() {
+					let result = document.getElementById("result");
+					let extraPoint = document.getElementById("score-add").value;
+					let sum = parseFloat(math) + parseFloat(verse) + parseFloat(english);
+					if (sum <= 30 && math >= 0 && verse >= 0 && english >= 0) {
+						switch (extraPoint) {
+							case "KV1":result.innerHTML = (sum + 0.75);
+								break;
+							case "KV2":result.innerHTML = (sum + 0.25);
+								break;
+							case "KV2-NT":result.innerHTML = (sum + 0.5);
+								break;
+							default: result.innerHTML = sum;
+								break;
+						}	
+						console.log ("Tổng điểm: " + result.innerHTML);			
+					}
+					else {
+						alert("Sorry!");
+					}
+				}
+			</script>
+		</div>
+	</main>
+</body>
+</html>

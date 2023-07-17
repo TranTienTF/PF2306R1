@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/Bootstrap/css/bootstrap.min.css">
+    <title>kiem tra so chan</title>
+</head>
+<body>
+    <header></header>
+    <main>
+        <div class="container p-3">
+			<h3>Kiểm tra 1 số nguyên</h3>
+			<form action="" method="get">
+				<div class="mb-3">
+					<label for="numbers" class="form-label">Nhập số</label><br>
+					<input type="number" name="numbers" id="numbers" value="0"
+						onchange="getInput(this)" class="form-control" >
+				</div>
+				<button type="button" onclick="check()" value="Kiểm tra">Kiểm tra</button>
+			</form>
+			<script>
+				function check() {
+					// khai báo biến
+					let a = Number(document.getElementById("numbers").value);
+					// kiểm tra input dữ liệu số
+					if (a == "") {
+						window.alert("Vui lòng nhập một số");
+						return false;
+					}
+					// kiểm tra số chẵn, lẻ
+					if (a > 0) {
+						if (a % 2 ==0 ) {
+							window.alert(a + " là số chẵn");
+						}
+						else {
+							window.alert(a + " là số lẻ");
+						}
+					}
+				}
+				function getInput(obj) {
+					console.log (obj.name);
+            		console.log (obj.value);
+				}
+			</script>
+		</div>
+    </main>
+</body>
+</html>

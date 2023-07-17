@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/Bootstrap/css/bootstrap.min.css">
+    <title>Kiem tra nam nhuan</title>
+</head>
+<body>
+    <head></head>
+    <main>
+        <div class="container">
+			<h3>Kiểm tra năm nhuận</h3>
+			<form action="" method="get">
+				<div class="mb-3">
+					<label for="years" class="form-label">Nhập năm</label><br>
+					<input type="number" name="years" id="years" value="0"
+						onchange="getInput(this)" class="form-control" >
+				</div>
+				<button type="button" onclick="checked()" value="Kiểm tra năm">Kiểm tra</button>
+			</form>
+			<script>
+				function checked() {
+					// khai báo var
+					let numYears = Number(document.getElementById("years").value);
+					// check input var
+					// check năm nhuận
+					if (numYears % 400 == 0) {
+						window.alert (yyyy + " là năm nhuận");				
+					}
+					if (numYears % 4 == 0){
+						if (numYears % 100 == 0) {
+							window.alert (numYears + " không phải là năm nhuận");
+						}
+						else {
+							window.alert (numYears + " là năm nhuận");
+						}
+					}
+				}
+				function getInput(obj) {
+					console.log (obj.name);
+            		console.log (obj.value);
+				}
+			</script>
+		</div>
+    </main>
+</body>
+</html>

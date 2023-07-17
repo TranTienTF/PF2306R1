@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/Bootstrap/css/bootstrap.min.css">
+    <title>app may tinh</title>
+</head>
+<body>
+    <header></header>
+	<main>
+		<div class="container m-auto">
+			<div class="app-calculation">
+				<h3>Caculator</h3>
+				<form action="" method="get">
+					<section class="mb-3">
+						<input type="number" name="number01" id="number01" onchange="getNumber01(this)" value="">
+						<span id="calculus" class="mx-3"></span>
+						<input type="number" name="number02" id="number02" onchange="getNumber02(this)" value="">
+					</section><br>
+					<section>
+						<input type="button" value="Addition (+)" onclick="addition()">
+						<input type="button" value="Subtraction (-)" onclick="subtraction()">
+						<input type="button" value="Multiplication (x)" onclick="mulcation()">
+						<input type="button" value="Division (/)" onclick="division()">
+					</section>
+					<p id="result"></p>
+					<!-- <p class="my-3 fw-bold">
+						Result Division: <span id="result"></span>
+					</p> -->
+				</form>
+				<script>
+					// Khai báo var
+					let number01, number02;
+					let calusSpan = document.getElementById("calculus").innerText;
+					let result = document.getElementById("result");
+					function getNumber01(obj) {
+						number01 = parseFloat(obj.value);
+					}
+					function getNumber02() {
+						number02 = parseFloat(obj.value) ;
+					}
+					// hàm tính toán
+					function addition() {
+						// event thay đổi
+						document.getElementById("calculus").innerText = "+";
+						// phép tính
+						result.innerText = "jdvndjk" + (number01 + number02);						
+					}		
+					function subtraction() {
+						let num01 = document.getElementById("number01").value;
+						let num02 = document.getElementById("number02").value;
+						// event thay đổi
+						document.getElementById("calculus").innerText = "-";
+						// phép tính
+						let result = parseInt(num01) - parseFloat(num02);
+						// kết quả
+						document.getElementById("result").innerHTML = result;
+					}
+					function mulcation() {
+						let num01 = document.getElementById("number01").value;
+						let num02 = document.getElementById("number02").value;
+						// event thay đổi
+						document.getElementById("calculus").innerText = "x";
+					}
+					function division() {
+						// event thay đổi
+						document.getElementById("calculus").innerText = ":";
+					}
+				</script>				
+			</div>
+		</div>
+	</main>
+</body>
+</html>

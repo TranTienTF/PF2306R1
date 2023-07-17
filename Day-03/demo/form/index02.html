@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Bootstrap/css/bootstrap.min.css">
+    <script src="/Bootstrap/js/bootstrap.bundle.min.js"></script>
+    <title>Order form</title>
+	<style>
+		#price {
+			width: 12rem;
+		}
+		.order-form {
+			max-width: 800px;
+		}
+		.order-form section {
+			box-shadow: 0 0.5rem 1rem rgba(12, 83, 224, 0.4);
+		}
+	</style>
+</head>
+<body>
+	<header></header>
+	<main>
+		<div class="container">
+			<div class="order-form text-center my-5 mx-auto">
+				<section class="border text-start p-2">
+					<h3 class="text-center py-3">Order Form</h3>
+					<form action="php.co" method="get">
+						<h4 class="mb-3">What would you like to buy?</h4>
+						<select name="price" id="price">
+							<option value="">A</option>
+							<option value="">B (+ 0.5$)</option>
+							<option value="">C (+ 1.0$)</option>
+						</select>
+						<h4 class="my-3">How many would you like to order</h4>
+						<p class="m-0">
+							<input type="radio" name="order_1" id="">
+							<span><b>1 - $10</b></span>
+						</p>
+						<p class="m-0">
+							<input type="radio" name="order_2" id="">
+							<span><b>2 - $20</b></span>
+						</p>
+						<p class="m-0">
+							<input type="radio" name="order_3" id="">
+							<span><b>3 - $25</b></span>
+						</p>
+						<h4 class="my-3">Name</h4>
+						<span>
+							<input type="text" placeholder="FirstName" class="me-2 p-1" required>
+							<input type="text" placeholder="LastName" class="p-1" required>
+						</span>
+						<h4 class="my-3">Email</h4>
+						<input type="email" placeholder="yohoo@living.co" size="47" class="p-1" required>
+						<h4 class="my-3">Phone Number</h4>
+						<div class="input_telphone">
+							<input type="tel" size="4" name="tel_phone" pattern="[A-Za-z] {4}" title="Nhập 4 ký tự số">
+							<span><b> - </b></span>
+							<input type="tel" size="4" name="tel_phone" pattern="[A-Za-z] {3}" title="Nhập 3 ký tự số">
+							<span><b> - </b></span>
+							<input type="tel" size="4" name="tel_phone" pattern="[A-Za-z] {3}" title="Nhập 3 ký tự số">
+						</div>
+						<div class="my-3">
+							<button type="submit" class="px-4 py-1 btn btn-outline-dark">Submit</button>
+						</div>
+					</form>
+				</section>
+			</div>
+		</div>
+	</main>
+    <footer></footer>
+</body>
+</html>

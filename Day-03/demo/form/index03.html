@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/Bootstrap/css/bootstrap.min.css">
+	<script src="/Bootstrap/js/bootstrap.bundle.min.js"></script>
+    <title>dang ky hoc vien</title>
+	<style>
+		.form_hobbies {
+			max-width: 800px;
+		}
+		#form-hobby ul li {
+			width: 10em;
+		}
+	</style>
+</head>
+<body>
+	<header></header>
+	<main>
+		<div class="container">
+			<div class="form_hobbies m-auto">
+				<section id="form-hobby" class="bg-info p-3 my-4">
+					<div class="bg-body p-2">
+						<h3 class="bg-danger text-light text-center">SỞ THÍCH CỦA BẠN</h3>
+						<form action="#" method="get">
+							<div class="row g-3 align-items-center">
+								<div class="col-3 text-end">
+									<label for="inputName">Họ và tên</label>
+								</div>
+								<div class="col-8 col-md-7 text-end">
+									<input type="text" id="inputName" class="form-control" aria-describedby="textName">
+								</div>
+								<div class="col-3 text-end">
+									<label for="inputEmail">Email</label>
+								</div>
+								<div class="col-8 col-md-7 text-end">
+									<input type="email" id="inputEmail" class="form-control">
+								</div>
+								<div class="col-3 text-end">
+									<span>Sở thích</span>
+								</div>
+								<div class="col-9">
+									<ul class="list-unstyled d-flex m-0">
+										<li>
+											<input type="checkbox" name="thể thao" id="thethao">
+											<label for="thethao">Thể thao</label>
+										</li>
+										<li>
+											<input type="checkbox" name="âm nhạc" id="music">
+											<label for="music">Âm nhạc</label>
+										</li>
+										<li>
+											<input type="checkbox" name="đọc sách" id="readBook">
+											<label for="readBook">Đọc sách</label>
+										</li>
+									</ul>
+								</div>
+								<div class="col-3"></div>
+								<div class="col-9">
+									<ul class="list-unstyled d-flex m-0">
+										<li>
+											<input type="checkbox" name="thể thao" id="websever">
+											<label for="websever">Lướt web</label>
+										</li>
+										<li>
+											<input type="checkbox" name="music" id="gaming">
+											<label for="gaming">Chơi game</label>
+										</li>
+										<li>
+											<input type="checkbox" name="readBook" id="film">
+											<label for="film">Điện ảnh</label>
+										</li>
+									</ul>
+								</div>
+								<div class="col-3"></div>
+								<div class="col-9">
+									<ul class="list-unstyled m-0">
+										<li>
+											<input type="checkbox" name="du lịch" id="gocamping">
+											<label for="gocamping">Du lịch</label>
+										</li>
+									</ul>
+								</div>
+								<div class="col-3"></div>
+								<div class="col-9">
+									<input type="submit" formaction="admin.php" value="Gửi thông tin">
+									<input type="reset" value="Nhập lại">
+								</div>
+							</div>
+						</form>
+					</div>
+				</section>
+				<section id="form-sign" class="bg-info p-3">
+					<div class="bg-warning-subtle p-2">
+						<h3 class="bg-success-subtle text-primary fw-bolder text-center">ĐĂNG KÝ HỌC VIÊN</h3>
+						<form action="#" method="get">
+							<div class="row mb-2 align-items-center">
+								<div class="col-3">
+									<label for="yourName">Họ và tên</label>
+								</div>
+								<div class="col-7">
+									<input type="text" id="yourName">
+								</div>
+							</div>
+							<div class="row mb-2 align-items-center">
+								<div class="col-3">
+									<label for="inputdateBirth">Ngày sinh</label>
+								</div>
+								<div class="col-7">
+									<input type="text" id="inputdateBirth">
+								</div>
+							</div>
+							<div class="row mb-2">
+								<div class="col-3">
+									<span>Giới tính</span>
+								</div>
+								<div class="col-7">
+									<span>
+										<input type="radio" id="checkMale">
+										<label for="checkMale">Nam</label>
+									</span>
+									<span>
+										<input type="radio" id="checkFemale">
+										<label for="checkFemale">Nữ</label>
+									</span>
+								</div>
+							</div>
+							<div class="row mb-2">
+								<div class="col-3">
+									<span>Địa chỉ</span>
+								</div>
+								<div class="col-7">
+									<textarea name="addrea" id="" cols="36" rows="4"></textarea>
+								</div>
+							</div>
+							<div class="row mb-2 align-items-center">
+								<div class="col-3">
+									<span>Lớp</span>
+								</div>
+								<div class="col-7">
+									<select name="class-list" id="class-list">
+										<option value="">- Chọn lớp -</option>
+										<option value="">Lập trình cơ bản</option>
+										<option value="">Lập trình website</option>
+										<option value="">Software Development</option>
+									</select>
+								</div>
+							</div>
+							<div class="row mb-2 align-items-center">
+								<div class="col-3">
+									<label for="inputEmail1">Email</label>
+								</div>
+								<div class="col-7">
+									<input type="email" id="inputEmail1">
+								</div>
+							</div>
+							<div class="row mb-3 align-items-center">
+								<div class="col-3">
+									<label for="inputPhone1">Phone</label>
+								</div>
+								<div class="col-7">
+									<input type="email" id="inputPhone1" pattern="[A-Aa-Z] {13}" title="Nhập trên 10 chữ số">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-3"></div>
+								<div class="col-7">
+									<input type="submit" formaction="admin.php" value="Đăng ký" class="px-3">
+									<input type="reset" value="Nhập lại" class="px-3">
+								</div>
+							</div>
+						</form>
+					</div>
+				</section>
+			</div>
+		</div>
+	</main>
+	<footer></footer>
+</body>
+</html>

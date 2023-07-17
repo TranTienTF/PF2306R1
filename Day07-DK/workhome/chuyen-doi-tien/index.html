@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Bootstrap/css/bootstrap.min.css">
+    <title>Chuyen doi tien te</title>
+</head>
+<body>
+    <main>
+		<div class="container">
+			<h3>Chuyển đổi tiền tệ</h3>
+			<div class="row">
+				<div class="col-3 fw-bolder">
+					Amount
+				</div>
+				<div class="col-3 fw-bolder">
+					From Currency
+				</div>
+				<div class="col-3 fw-bolder">
+					To Currency
+				</div>
+				<div class="col-3"></div>
+			</div>
+			<div class="row">
+				<div class="col-3">
+					<input type="number" name="Số tiền" id="money" onchange="getMoney(this)">
+				</div>
+				<div class="col-3">
+					<select name="" id="from-unit" onchange="getLoca(this)">
+						<option value="">--Chọn--</option>
+						<option value="VND">VietNam(VND)</option>
+						<option value="USD">USD</option>
+						<option value="CNY">China(CNY)</option>
+						<option value="JPY">Yên Nhật(JPY)</option>
+					</select>
+				</div>
+				<div class="col-3">
+					<select name="" id="to-unit" onchange="getArea(this)">
+						<option value="">--Chọn--</option>
+						<option value="USD">USD</option>
+						<option value="CNY">China(CNY)</option>
+						<option value="JPY">Yên Nhật(JPY)</option>
+						<option value="VND">VietNam(VND)</option>
+					</select>
+				</div>
+				<div class="col-3">
+					<input type="button" value="Convert" onclick="clickConvert()" class="btn btn-outline-primary">
+				</div>
+			</div>
+			<p class="text-primary">Result: <span id="result"></span></p>
+		</div>
+		<script>
+			// var
+			let money, valueInput1, valueInput2;
+			let result = document.getElementById("result");
+			// output var
+			function getMoney(obj) {
+				console.log(obj.value);
+				money = obj.value;
+			}
+			function getLoca(obj) {
+				console.log(obj.value);
+				valueInput1 = obj.value;
+			}
+			function getArea(obj) {
+				console.log(obj.value);
+				valueInput2 = obj.value;
+			}
+			// phep tinh 
+			function clickConvert() {
+				let Result;
+				if (valueInput1 === "VND" && valueInput2 === "USD") {
+					Result = parseInt(money) / 23000;
+				} else if(valueInput1 === "USD" && valueInput2 === "VND") {
+					Result = parseInt(money) * 23000;
+				} else if (valueInput1 === "VND" && valueInput2 === "CNY") {
+					Result = parseFloat(money) * 0.0003;
+				} else if (valueInput1 === "CNY" && valueInput2 === "VND") {
+					Result = parseFloat(money) * 3225.73;
+				} else if (valueInput1 === "VND" && valueInput2 === "JPY") {
+					Result = parseFloat(money) * 0.0059;
+				} else if (valueInput1 === "JPY" && valueInput2 === "VND") {
+					Result = parseFloat(money) * 170.80;
+				}
+				else {
+					alert("Please update the conversion value!");
+				}
+				result.innerHTML = Result + ` ${valueInput2}`;
+			}
+		</script>
+	</main>
+</body>
+</html>

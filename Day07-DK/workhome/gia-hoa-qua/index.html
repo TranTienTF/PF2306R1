@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gia hoa qua</title>
+  </head>
+  <body>
+    <main>
+		<div class="container">
+			<h3>Giá hoa quả</h3>
+			<input type="text" name="Tên sản phẩm" id="food-product" onchange="getInputPrice(this)" value="">
+			<input type="button" onclick="clickPrice()" value="Xem giá">
+			<p id="price-money"></p>
+			<script>
+				let valueName = document.getElementById ("food-product");
+				let price = document.getElementById("price-money");
+				function getInputPrice(obj) {
+					console.log (obj.name);
+					console.log (obj.value);
+					valueName = obj.value;
+				}
+				function clickPrice() {
+					switch (valueName) {
+						case "Măng cụt": price.innerHTML = "50.000 VNĐ/kg"
+							break;
+						case "Ổi":							
+						case "Dưa Hấu": price.innerHTML = "20.000 VNĐ/kg"
+							break;
+						case "Táo":
+						case "Xoài": price.innerHTML = "30.000 VNĐ/kg"
+							break;
+						case "Cam":
+						case "Chôm Chôm": price.innerHTML = "40.000 VNĐ/kg"
+							break;
+						default:
+							price.innerHTML = "Vui lòng nhập lại tên sản phẩm"
+							break;
+					}
+				}
+			</script>
+		</div>
+	</main>
+  </body>
+</html>

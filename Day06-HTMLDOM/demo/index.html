@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo-text">This is programing</p>
+	<p class="text-center">
+		This is goodness.
+	</p>
+	<p class="text-center">
+		This is goodness-02.
+	</p>
+	<script>
+		// get the element by Id
+		let demoText = document.getElementById("demo-text");
+		demoText.innerHTML = "<h1>Noi dung thay doi</p>";
+		console.log(demoText.innerHTML);
+		// get the element by tag name
+		let pTag = document.getElementsByTagName("p");
+		// get the element by class name
+		let textcenterClass = document.getElementsByClassName("text-center");
+		console.log(textcenterClass);
+		console.log(textcenterClass[0]);
+	</script>
+</body>
+</html>

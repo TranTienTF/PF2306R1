@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tinh lai suat</title>
+</head>
+<body>
+    <script>
+        let money = parseFloat(prompt("Vui long nhap so tien vay: "))
+        let ls = parseFloat(prompt("Vui long nhap lai suat: "))
+        let years = parseFloat(prompt("Vui long nhap so nam vay: "))
+        const ls0fyear = money * (ls / 100)
+        let moneyLet = money + years * ls0fyear
+        document.write ("So tien ca goc lan lai phai tra la: " + moneyLet)
+        console.log ('So tien ca goc lan lai phai tra sau ${years} la ${moneyLet}')
+    </script>
+</body>
+</html>

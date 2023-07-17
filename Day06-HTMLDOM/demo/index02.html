@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add elament to DOM</title>
+</head>
+<body>
+    <div class="container" id="content">
+        <p id="first-order">This is one programing.</p>
+        <p id="second-order">This is two programing.</p>
+    </div>
+    <script>
+        let contentDiv = document.getElementById("content");
+        // them phan tu vao container
+        const introPage = document.createElement("p");
+        introPage.innerText = "Paragraph 3";
+        contentDIV.appendChild(introPage);
+         // delete phan tu
+        let firstOrder = document.getElementById("first-order");
+        // cach 1
+        firstOrder.remove();
+        // cach 2
+        contentDiv.removeChild(firstOrder);
+    </script>
+</body>
+</html>

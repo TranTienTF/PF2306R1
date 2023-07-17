@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/Bootstrap/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+		<div class="container p-4">
+			<input type="number" class="form-control mb-3" pattern="[9]" onchange="getFirstNumber(this)">
+			<input type="number" class="form-control mb-3" pattern="[9]" onchange="getSecondNumber(this)">
+			<input type="button" class="btn btn-outline-primary mb-3" id="btnCheck" onclick="btnCheck()" value="Kiểm tra">
+			<p id="result"></p>
+		</div>
+		<script>
+			let number1, number2;
+			const r = 10;
+			let result = document.getElementById("result");
+			let btnElement = document.getElementById("btnCheck");
+			function getFirstNumber(obj) {
+				console.log(obj.value);
+				numberX = obj.value;
+			}
+			function getSecondNumber(obj) {
+				console.log(obj.value);
+				numberY = obj.value;
+			}
+			function btnCheck() {
+				let sum = Math.sqrt(Math.pow(numberX, 2) + Math.pow(numberY, 2));
+				if (sum <= r && numberX != 0 && numberY != 0) {
+					result.innerHTML = (`Point (${number1}, ${number2}) is in the cricle`);
+				}
+				else {
+					result.innerHTML = (`Point (${number1}, ${number2}) is not in the cricle`);
+				}
+			}
+		</script>
+	</main>
+</body>
+</html>

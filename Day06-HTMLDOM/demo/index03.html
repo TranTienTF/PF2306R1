@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EvenHandler</title>
+</head>
+<body>
+    <div class="container">
+        <p id="first-order"></p>
+        <button type="button" onclick="btnHander()">Click me</button>
+        <button type="button" onclick="btnClickerr(this)">Click check</button>
+        <button type="button" id="btnclick" >Click new</button>
+		<div id="result"></div>
+    </div>
+    <script>
+		// khai bao var
+		let result = document.getElementById("result");
+		let btnclick = document.getElementById("btnclick");
+		let count = 0;
+		result.innerText = count;
+		// Event 01 - Hàm ko chứa đối số
+		function btnHander() {
+			// event sau khi click
+			count++;	
+			result.innerText = count;
+		}		
+		// Event 02 - Hàm chứa đối số
+		function btnClickerr(obj) {
+			console.log(obj);
+			obj.innerText = "Clicked" + count++;
+		}
+		// Event 03 - by DOM Id
+		btnClick.addEventListener("click", function() {
+			console.log(obj);
+		})
+    </script>
+</body>
+</html>

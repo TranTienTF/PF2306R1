@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/Bootstrap/css/bootstrap.min.css">
+	<script src="/Bootstrap/js/bootstrap.bundle.min.js"></script>
+    <title>dang ky tai khoan</title>
+	<style>
+		.SignForm {
+			width: 380px;
+		}
+		@media only screen and (min-width: 1248px) {
+			.main-container::after {
+			content: "";
+			position: absolute;
+			bottom: -80px;
+			background: url(/Day-03/asset/media/img_01.png) no-repeat -80px;
+			background-size: contain;
+			width: 480px;
+			height: 440px;
+			}
+			.main-container::before {
+				content: "";
+				position: absolute;
+				right: -80px;
+				background: url(/Day-03/asset/media/img_02.png) no-repeat 0 -100px;
+				background-size: contain;
+				width: 450px;
+				height: 450px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<header></header>
+	<main>
+		<div class="container-fluid p-0">
+			<div class="main-container position-relative overflow-hidden">
+				<div class="logo-web px-3 px-md-4 px-lg-5 pt-3">
+					<a href="example.com" class="text-decoration-none text-black fw-bolder fs-4">
+						<img src="/Day-03/asset/media/img_04.png" alt="logo web" width="50" height="30">
+						SEMRIOT
+					</a>
+				</div>
+				<div class="SignForm m-auto text-center py-sm-2 py-md-3 py-lg-4 my-2">
+					<h3 class=" py-3">ĐĂNG KÝ TÀI KHOẢN</h3>
+					<form action="php.co" method="get" autocomplete="off" target="_blank">
+						<button type="button" data-auth="google"
+							class="py-2 mb-4 w-100 btn btn-outline-light rounded-3 border-dark-subtle">
+							<span>
+								<img src="/Day-03/asset/media/img_03.png" alt="logo google" width="24" height="24">
+								<span class="px-5 text-black">Continue with Google</span>
+							</span>
+						</button>
+						<div class="border-bottom mb-3 position-relative">
+							<p class="m-0 bg-body pb-1 position-absolute top-0 start-50 translate-middle">or</p>
+						</div>
+						<div class="mb-3">
+							<label for="exampleInputName" class="form-label">Họ và tên:</label>
+							<input type="text" class="form-control" id="exampleInputName" placeholder="Họ tên của bạn">
+						</div>
+						<div class="mb-3">
+							<label for="exampleInputEmail" class="form-label">Email:</label>
+							<input type="email" class="form-control" id="exampleInputEmail" placeholder="yohoo@living.co" aria-describedby="emailHelp">				
+						</div>
+						<div class="mb-3">
+							<label for="exampleInputPhone" class="form-label">Số điện thoại:</label>
+							<input type="text" class="form-control" id="exampleInputPhone">
+						</div>
+						<div class="mb-3">
+							<div>Giới tính:</div>
+							<span class="px-2">
+								<input type="radio" name="Nam" id="Male">
+								<label for="SexMale" class="form-label m-0">Nam</label>
+							</span>
+							<span class="px-2">
+								<input type="radio" name="Nam" id="Female">
+								<label for="Female" class="form-label m-0">Nữ</label>
+							</span>
+						</div>
+						<button type="button" class="mb-3 btn btn-outline-primary w-100 py-2">
+							Đăng ký
+						</button>
+						<div class="mb-2">
+							<span>
+								Bạn đã có tài khoản?
+								<a href="http://">Đăng nhập</a>
+							</span>
+						</div>
+						<div class="mb-2">
+							Bằng cách tạo tài khoản, bạn đã đồng ý với
+							<a href="http://">Chính sách bảo mật</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</main>
+    <footer></footer>
+</body>
+</html>

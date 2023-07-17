@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Bootstrap/css/bootstrap.min.css">
+    <script src="/Bootstrap/js/bootstrap.bundle.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container p-3">
+        <form  method="get">
+            <div class="mb-3">
+              <label for="amount" class="form-label">Số tiền</label>
+              <input type="number" name="amount" onchange="getInput(this)" class="form-control" id="amount">
+            </div>
+            <div class="mb-3">
+              <label for="rate" class="form-label">Lãi suất</label>
+              <input type="number" name="rate" step="0.1" class="form-control" id="rate">
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="years">Nhập số năm cần vay</label>
+              <input type="number" name="years" class="form-control" id="years">
+            </div>
+            <button type="submit" class="btn btn-primary">Tính</button>
+        </form>
+    </div>
+    <script>
+        let amount, rate, years;
+        function getInput(obj) {
+            console.log (obj.name);
+            console.log (obj.value);
+        }
+    </script>
+</body>
+</html>
