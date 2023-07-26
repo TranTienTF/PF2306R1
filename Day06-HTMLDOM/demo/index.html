@@ -7,6 +7,7 @@
 </head>
 <body>
     <p id="demo-text">This is programing</p>
+	<button type="button" onclick="showMessage();">Click Me!</button>
 	<p class="text-center">
 		This is goodness.
 	</p>
@@ -16,12 +17,14 @@
 	<script>
 		// get the element by Id
 		let demoText = document.getElementById("demo-text");
-		demoText.innerHTML = "<h1>Noi dung thay doi</p>";
-		console.log(demoText.innerHTML);
+		let textcenterClass = document.getElementsByClassName("text-center");
+		function showMessage() {
+			demoText.innerHTML = "<h1>Noi dung thay doi</p>";
+			console.log(demoText.innerHTML);
+		}
 		// get the element by tag name
 		let pTag = document.getElementsByTagName("p");
 		// get the element by class name
-		let textcenterClass = document.getElementsByClassName("text-center");
 		console.log(textcenterClass);
 		console.log(textcenterClass[0]);
 	</script>
