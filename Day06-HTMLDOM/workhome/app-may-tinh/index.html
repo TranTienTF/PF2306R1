@@ -25,47 +25,42 @@
 						<input type="button" value="Division (/)" onclick="division()">
 					</section>
 					<p id="result"></p>
-					<!-- <p class="my-3 fw-bold">
-						Result Division: <span id="result"></span>
-					</p> -->
 				</form>
 				<script>
 					// Khai báo var
-					let number01, number02;
 					let calusSpan = document.getElementById("calculus").innerText;
 					let result = document.getElementById("result");
+					let number01, number02, number03 = 0;
 					function getNumber01(obj) {
-						number01 = parseFloat(obj.value);
+						number01 = obj.value;
+						console.log(parseFloat(number01));
 					}
-					function getNumber02() {
-						number02 = parseFloat(obj.value) ;
+					function getNumber02(obj) {
+						number02 = obj.value;
+						console.log(parseFloat(number02));
 					}
 					// hàm tính toán
 					function addition() {
 						// event thay đổi
 						document.getElementById("calculus").innerText = "+";
 						// phép tính
-						result.innerText = "jdvndjk" + (number01 + number02);						
+						result.innerHTML = parseFloat(number01) + parseFloat(number02);
 					}		
 					function subtraction() {
-						let num01 = document.getElementById("number01").value;
-						let num02 = document.getElementById("number02").value;
 						// event thay đổi
 						document.getElementById("calculus").innerText = "-";
 						// phép tính
-						let result = parseInt(num01) - parseFloat(num02);
-						// kết quả
-						document.getElementById("result").innerHTML = result;
+						result.innerHTML = parseFloat(number01) - parseFloat(number02);
 					}
 					function mulcation() {
-						let num01 = document.getElementById("number01").value;
-						let num02 = document.getElementById("number02").value;
 						// event thay đổi
 						document.getElementById("calculus").innerText = "x";
+						result.innerHTML = parseFloat(number01) * parseFloat(number02);
 					}
 					function division() {
 						// event thay đổi
 						document.getElementById("calculus").innerText = ":";
+						result.innerHTML = parseFloat(number01) / parseFloat(number02);
 					}
 				</script>				
 			</div>
