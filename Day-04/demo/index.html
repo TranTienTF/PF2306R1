@@ -3,35 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>thuc hanh bien va toan tu</title>
 </head>
 <body>
-    <!-- <script>
-        
-        // trường nhập nội dung
-        /* let name = prompt ("Enter your name...") */
-        // hiển thị xác nhận nội dung
-        let confirmation = confirm ("Do you want to delete this file?")
-        console.log (confirmation)
-    </script> -->
+    <!-- bai 1: khai bao bien -->
     <script>
-        /* let name = prompt("Vui lòng điền tên của bạn?")
-        document.write("Tên bạn là " + name) */
-        /* let width = 20
-        let height = 10
-        let area = width * height
-        document.write("Area" + area) */
-        let a = prompt("Nhập a");
-        let b = prompt("Nhập b");
-        s1 = "a"
-        s2 = "b"
-        if (a > b && a % b == 0) {
-            document.write ("UCLN cua a và b là" + b);
+        let i = 10;
+        let f = 20.5;
+        let b = true;
+        let s = "Hà Nội";
+        document.write("i =" + i + "; f =" + f + "; b =" + b + "; s =" + s);
+    </script>
+    <script>
+        // bai 2: tinh dien tich
+        let width = 20;
+        let height = 10;
+        let area = width * height;
+        document.write("<br>Area = " + area);
+        // bai 3: tim UCLN cua 2 so a va b
+        let x = parseFloat(prompt("Nhập số a"));
+        let y = parseFloat(prompt("Nhập số b"));
+        if (x > y && x % y == 0) {
+            alert("UCLN cua a và b là " + y);
         }
         else {
-            document.write ("a khong chia het cho b");
-        }
-            
+            alert("a khong chia het cho b");
+        }     
     </script>
 </body>
 </html>

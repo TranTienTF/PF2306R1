@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhung javascript</title>
+    <style>
+        button {
+            margin: 10px;
+            padding: 2px;
+        }
+    </style>
+</head>
+<body>
+    <!-- bai 1: tao nut button-->
+    <button type="button" onclick="alert('Xin chào!');">Click one!</button>
+    <!-- bai 2: nut button voi <script> -->
+    <div class="container">
+        <button type="button" onclick="showMessage();">Click second!</button>
+        <script>
+            function showMessage() {
+                alert("Xin chao everyone!");
+            }
+        </script>
+    </div>
+    <!-- bai 3: nhung file js -->
+    <button type="button" onclick="showHello();">Click third!</button>
+    <script src="./script.js"></script>
+</body>
+</html>
