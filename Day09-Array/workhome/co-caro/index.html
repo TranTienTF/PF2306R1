@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/Bootstrap/css/bootstrap.min.css">
+    <title>Game caro</title>
+	<style>
+		.board {
+			width: 260px;
+		}
+		#cell {
+			width: 70px;
+			height: 70px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+    <div class="container">
+		<div class="board my-3">
+			<h3 class="text-center">Cờ Caro</h3>
+			<div class="d-flex justify-content-between">
+				<div id="game-user">Người chơi: <span id="game-status"></span></div>
+				<button id="restart-btn">
+					<img src="./go-back-arrow.png" alt="return game" width="18px" height="18px">
+				</button>
+				<button id="dimension-btn">3x3</button>
+			</div>
+			<div id="chessboard" class="my-3">
+				<table border="1" class="mx-auto">
+					<tr class="cells">
+						<td id="cell" class="border-black border-2 text-center fs-1"></td>
+						<td id="cell" class="border-black border-2 text-center fs-1"></td>
+						<td id="cell" class="border-black border-2 text-center fs-1"></td>
+					</tr>
+					<tr class="cells">
+						<td id="cell" class="border-black border-2 text-center fs-1"></td>
+						<td id="cell" class="border-black border-2 text-center fs-1"></td>
+						<td id="cell" class="border-black border-2 text-center fs-1"></td>
+					</tr>
+					<tr class="cells">
+						<td id="cell" class="border-black border-2 text-center fs-1"></td>
+						<td id="cell" class="border-black border-2 text-center fs-1"></td>
+						<td id="cell" class="border-black border-2 text-center fs-1"></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<script src="../co-caro/script.js"></script>
+	</div>
+</body>
+</html>

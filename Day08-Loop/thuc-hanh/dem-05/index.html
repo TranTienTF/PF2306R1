@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hien thi chuoi</title>
+</head>
+<body>
+	<p id="text"></p>
+    <script>
+		let demoText = document.getElementById("text");
+		let i, text="";
+		for (i = 0; i < 6; i++) {
+			text += "The number is: " + i + "<br>";
+		}
+		demoText.innerHTML = text;
+	</script>
+	<script>
+		let number = parseInt(prompt("Hãy nhập số nguyên n"));
+		let sum = 0;
+		let j;
+		for (j = 0; j <= number; j++) {
+			sum += j;
+		}
+		console.log(sum);
+		document.write(`Tổng từ 0 -3 ${number} là: ` + sum);
+	</script>
+</body>
+</html>

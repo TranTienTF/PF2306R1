@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tinh tong cac so da chon</title>
+</head>
+<body>
+	<button type="button" onclick="onClickAdd()">Start</button>
+	<p id="result"></p>
+    <script>
+		function onClickAdd() {
+			let a = parseInt(prompt("Enter the smallest number"));
+			let b = parseInt(prompt("Enter the largest number"));
+			let result = document.getElementById("result");
+			console.log(a);
+			console.log(b);
+			let sum = 0, i = a;
+			for (i ; i <= b; i++) {
+					sum = sum + i;
+				}
+			console.log(sum);
+			result.innerHTML = "Tổng các số từ " + a + " đến " + b + " : " + sum;
+		}
+	</script>
+</body>
+</html>

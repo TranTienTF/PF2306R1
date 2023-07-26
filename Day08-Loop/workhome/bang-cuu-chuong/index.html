@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/Bootstrap/css/bootstrap.min.css">
+	<title>Bang cuu chuong</title>
+</head>
+<body>
+	<script>
+		let myTabMultip = "<table border='1' width='100%'>"
+		for (let i = 2; i < 10; i++) {
+			myTabMultip = myTabMultip + "<tr>";
+			for (let j = 2; j < 10; j++) {
+				myTabMultip += "<td>" + j + " x " + i + " = " + i*j + "</td>";
+			}
+			myTabMultip = myTabMultip + "</tr>";
+		}
+		myTabMultip = myTabMultip + "</table>";
+		document.write(myTabMultip);
+	</script>
+</body>
+</html>

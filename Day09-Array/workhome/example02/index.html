@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doi font chu hoa va chu thuong</title>
+</head>
+<body>
+    <!-- <div class="input-group my-3 row">
+        <span class="input-group-text border border-dark col-3">Nhập văn bản</span>
+        <input type="text" onchange="getValueText(this)" class="form-floating px-3 col-7">
+        <button class="btn btn-outline-secondary border-2 border-dark col-2" id="clickFont">Đổi font</button>
+    </div> -->
+    <script>
+        function checkCharType (charToCheck) { 
+            let returnValue = "O";
+            let charCode = charToCheck.charCodeAt(myArray[0]);
+            if(charCode >= "A".charCodeAt(myArray[0]) && charCode <= "Z".charCodeAt(myArray[0])){
+                returnValue = "U";
+            }else if (charCode >= "a".charCodeAt(myArray[0]) &&
+                        charCode <= "z".charCodeAt(myArray[0]) ){
+                returnValue = "L";
+            }else if (charCode >= '0'.charCodeAt(myArray[0]) &&
+                    charCode <= '9'.charCodeAt(myArray[0]) ) {
+                returnValue = "N";
+            }
+            return returnValue;
+        }
+        let myString = prompt("Enter Some text: ");
+        let myArray = [...myString];
+        console.log(myArray);
+        let secondArr = [];
+        for (let i = 0; i < myArray.length; i++) {
+            switch (checkCharType(myArray[i])) {
+            case "U":
+                secondArr.push(myArray[i].toLowerCase());
+                break;
+            case "L":
+                secondArr.push(myArray[i].toUpperCase());
+                break;
+            case "N":
+                console.log(myArray[i]);
+                break;
+            default:
+                secondArr.push(" ");
+                break;
+            }
+        }
+        console.log(secondArr.join(' '));
+        document.write(secondArr.join(''));
+    </script>
+</body>
+</html>

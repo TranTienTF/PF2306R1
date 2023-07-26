@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Bootstrap/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- bai 1 -->
+    <script>
+        let myColor = ["Red", "Green",  "White", "Black"];
+        // cach 1
+        for (let i = 0; i < myColor.length; i++) {
+            console.log(myColor[i]);
+        }
+        // cach 2: output bang ham san
+        console.log(myColor.join(","));
+    </script>
+    <!-- bai 2 -->
+    <div class="container">
+        <div class="input-group my-3 row">
+            <span class="input-group-text border border-dark col-3" id="inputGroup-sizing-number">Nhập số</span>
+            <input type="number" onchange="getValueNumber(this)" class="form-floating px-3 col-9">
+        </div>
+        <div class="input-group mb-3 row">
+            <button class="btn btn-outline-secondary col-3 text-start" onclick="clickOut()">Kết quả</button>
+            <span id="button-sizing-result" class="border border-dark px-3 py-1 col-9"></span>
+        </div>
+
+        <script>
+            let numberInput, myString;
+            let numberArr = [];
+            let result = document.getElementById("button-sizing-result");
+            function getValueNumber(obj) {
+                numberInput = obj.value;
+                console.log(numberInput.toString());
+            }
+            // bai 2: chuyen so thanh chuoi
+            function clickOut() {
+                for (let i = 0; i < numberInput.length; i++) {
+                    if (numberInput[i] % 2 == 0 && numberInput[i + 1] % 2 == 0) {
+                        numberArr.push(numberInput[i],"-");
+                    } else {
+                        numberArr.push(numberInput[i]);
+                    }
+                }
+                console.log(numberArr);
+                result.innerHTML = numberArr.join("");
+            }
+            
+        </script>
+    </div>
+    <!-- bai 3 -->
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/Bootstrap/css/bootstrap.min.css">
+    <title>Game doan so</title>
+</head>
+<body>
+    <button onclick="getStart()" class="btn btn-outline-secondary">Start game</button>
+	<p id="text-result"></p>
+	<script>
+		let textResult = document.getElementById("text-result");
+		function getStart() {
+			let maxNumber = parseInt(prompt("Hãy nhập số lớn nhất có thể dự đoán"));
+			let ranNumber = Math.floor(Math.random() * maxNumber);
+			console.log("KQ trúng thưởng:" + ranNumber);
+			let forecastNum;
+			let count = 1;
+			do {
+				forecastNum = parseInt(prompt("Hãy nhập số dự đoán từ 0 đến " + maxNumer));
+				console.log("Dự đoán: " + forecastNum);
+				if (forecastNum == ranNumber ) {
+					alert("Chúc mừng bạn đã đoán đúng");
+					break;
+				}
+				count += 1;
+			} while( count < 4 && forecastNum < maxNumber)
+			alert("Vui lòng chơi lại");
+			textResult.innerHTML = "Dự đoán từ 0 đến " + maxNumber + "<br>" + "KQXS: " + ranNumber;
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day Fibonacci</title>
+</head>
+<body>
+	<script>
+		let n = parseInt(prompt("Enter a number > 0"));
+		let n1 = 0, n2 = 1, fibonacci;
+		console.log(n1);
+		console.log(n2);
+		document.write("Fibonacci Series: " + n2 + "<br>");
+		/* fibonacci = n1 + n2; */
+		let i = 2
+		while(i < n && n > 0) {
+			console.log(fibonacci);
+			document.write("Fibonacci Series: " + fibonacci + "<br>");
+			n1 = n2;
+			n2 = fibonacci;
+			fibonacci = n1 + n2;
+			i++;
+		}
+		/* document.write("Fibonacci Series: " + fibonacci); */
+	</script>
+    
+</body>
+</html>
